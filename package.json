@@ -1,0 +1,30 @@
+{
+  "name": "ng-promise-buttons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist && minify dist/promise-button.js --output dist/promise-button.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camerondubas/ng-promise-buttons.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camerondubas/ng-promise-buttons/issues"
+  },
+  "homepage": "https://github.com/camerondubas/ng-promise-buttons#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "minifier": "^0.8.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}
