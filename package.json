@@ -1,6 +1,6 @@
 {
   "name": "ng-promise-buttons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular Loading Buttons for Promises",
   "main": "dist/promise-buttons.js",
   "scripts": {
