@@ -1,8 +1,8 @@
 {
   "name": "ng-promise-buttons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Angular Loading Buttons for Promises",
-  "main": "dist/promise-buttons.js",
+  "main": "dist/promise-button.js",
   "scripts": {
     "build": "babel src --out-dir dist && minify dist/promise-button.js --output dist/promise-button.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
