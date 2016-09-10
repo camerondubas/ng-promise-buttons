@@ -3,8 +3,7 @@ export default angular.module('promiseButtons', [])
   return {
     restrict: 'EA',
     scope: {
-      promiseBtn: '=',
-      promiseBtnOptions: '=?'
+      promiseButtonOptions: '=?'
     },
     link: (scope, element, attrs) => {
       const CLICK_EVENT = 'click';
@@ -103,25 +102,19 @@ export default angular.module('promiseButtons', [])
         return angular.element(submitBtnEls);
       };
 
-      // INIT
-      if (attrs.promiseBtn) {
-        addHandlersForCurrentBtnOnly(element);
-        initPromiseWatcher(() => scope.promiseBtn, element);
-
-      } else if (attrs.hasOwnProperty(CLICK_ATTR)) {
+      if (attrs.hasOwnProperty(CLICK_ATTR)) {
         addHandlersForCurrentBtnOnly(element);
         handleViewPromiseFunctions(CLICK_EVENT, CLICK_ATTR, element);
 
       } else if (attrs.hasOwnProperty(SUBMIT_ATTR)) {
         // get child submits for form elements
-        var btnElements = getSubmitBtnChildren(element); // TODO: Needs some work
-
+        var btnElements = getSubmitBtnChildren(element);
         addHandlersForCurrentBtnOnly(btnElements);
         handleViewPromiseFunctions(SUBMIT_EVENT, SUBMIT_ATTR, btnElements);
       }
 
       // watch and update options being changed
-      scope.$watch('promiseBtnOptions', newVal => {
+      scope.$watch('promiseButtonOptions', newVal => {
         if (angular.isObject(newVal)) {
           config = angular.extend({}, config, newVal);
         }
@@ -129,7 +122,7 @@ export default angular.module('promiseButtons', [])
     }
   };
 }])
-.provider('promiseButtons', () => {
+.provider('promiseButton', () => {
   // DEFAULTS & CONFIG
   var config = {
     disableBtn: true,
