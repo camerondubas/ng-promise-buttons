@@ -70,7 +70,7 @@
       addClassToCurrentBtnOnly: false, // If multiple buttons have the same promise, only current button will show loading state
       disableCurrentBtnOnly: false // If multiple buttons have the same promise, only current button will disable
     });
-  }
+  }]);
   ```
   
   The config can but updated on a per use basis by adding `promise-button-config="{configObject}` to specific button/form.
